@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Art{% endblock%}
+{% block content %}
+    <div class="content">
+        <div class="art-list-area">
+            {% for object in object_list %}
+                <div class="art-list-item">
+                    <a href="{% url 'swifri:art_detail' pk=object.pk %}">
+                        <img src="{{ object.image.url }}">
+                        <h3>{{ object.title }}</h3>
+                    </a>
+                </div>
+                {% endfor %}
+        </div>
+    </div>
+{% endblock %}

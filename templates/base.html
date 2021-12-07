@@ -1,0 +1,39 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1, minium-scale=1, user-scale-able=yes " >
+        <link rel="stylesheet", type="text/css", href="{% static 'css/mystyle.css' %}">
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <div class="swifri">
+                    <h1 class="h1-swifri"><a href="{% url 'swifri:index' %}">Swifri</a></h1>
+                </div>
+                <div class="sns-accounts">
+                    <a href="https://twitter.com/SwiFri" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/swifri_/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://opensea.io/SwiFri"target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-bitcoin"></i>
+                    </a>
+                </div>
+            </div>
+
+        </header>
+
+        {% block content %}{% endblock %}
+
+        <footer>
+            <div>
+                <h1></h1>
+            </div>
+        </footer>
+    </body>
+</html>

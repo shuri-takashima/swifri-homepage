@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Art{% endblock%}
+{% block content %}
+    <div class="content">
+        <div class="art-detail-area">
+            <ul>
+                <li class="art-detail-image">
+                    <img src="{{ art.image.url }}">
+                </li>
+                <li class="art-detail-title">
+                    <h1>{{ art.title }}</h1>
+                </li>
+                <li class="art-detail-date">
+                    <p>{{ art.date|date:"Y.n.j" }}</p>
+                </li>
+                <li class="art-detail-description">
+                    <h3>{{ art.description| linebreaksbr }}</h3>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Top{% endblock%}
+{% block content %}
+    <div class="content">
+        <ul class="three-key">
+            <li>
+                <a href="#">
+                    <h3>MOVIE</h3>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'swifri:art_list' %}">
+                    <h3>ART</h3>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>MUSIC</h3>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="about">
+            <img src="{% static 'images/inside_woman.jpg' %}">
+        </div>
+        <div class="intro">
+            <h2>
+                We design from the past.
+            </h2>
+            <h4>
+                We create the movie, art, music by artificial intelligence.<br>
+                Enjoy my work !!<br>
+                *Sorry, As of now, only art.<br>
+            </h4>
+
+        </div>
+
+    </div>
+{% endblock %}
